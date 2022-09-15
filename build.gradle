@@ -4,6 +4,7 @@ buildscript {
     }
     repositories {
         mavenCentral()
+        jcenter()
     }
     dependencies {
         classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
@@ -21,6 +22,7 @@ sourceCompatibility = 1.8
 
 repositories {
     mavenCentral()
+    jcenter()
 }
 
 dependencies {
@@ -29,6 +31,9 @@ dependencies {
 
     implementation('org.springframework.boot:spring-boot-starter-web')
     testCompileOnly('org.springframework.boot:spring-boot-starter-test')
+
+    implementation('org.projectlombok:lombok:')
+    annotationProcessor('org.projectlombok:lombok:')
 }
 
 test {
